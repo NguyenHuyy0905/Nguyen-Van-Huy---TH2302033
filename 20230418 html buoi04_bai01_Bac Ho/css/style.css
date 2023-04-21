@@ -1,0 +1,26 @@
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    background-color: #00B55B;
+    max-width: 1200px;
+}
+
+.title-1 {
+    text-align: center;
+}
+img {
+    width: 100%;
+}
+.title-2 {
+    color: #fff;
+    text-shadow: 20px 13px 12px #000000;
+    text-align: center;
+}
+.legend {
+    background-color: #068b49;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px 5px skyblue;
+}

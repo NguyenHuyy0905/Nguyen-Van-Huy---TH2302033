@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Nguyen Van Huy - Bai 2</title>
+</head>
+<body>
+    <h1 class="GeeksforGeeks">GeeksforGeeks Survey Form</h1>
+    <form action="https://httpbin.org/anything" method="post">
+        <label for="name">Name</label>
+        <br>
+        <input type="text" id="name" name="name" value="" placeholder="Enter your name">
+        <br><br>
+        <label for="email">Email</label>
+        <br>
+        <input type="text" id="email" name="email" value="" placeholder="Enter your email">
+        <br><br>
+        <label for="age">Age</label>
+        <br>
+        <input type="text" id="age" name="age" value="" placeholder="Enter your age">
+        <br><br>
+        <label for="option">Which option best describes you?</label>
+        <br>
+        <select name="work" id="work">
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="worker">Worker</option>
+            <option value="engineer">Engineer</option>
+        </select>
+        <p>Would you recommend GeeksforGeeks to a freind?</p>
+            <input type="radio" name="recommend">Yes <br>
+            <input type="radio" name="recommend">No <br>
+            <input type="radio" name="recommend">Maybe
+        <p>Languages and FrameWorks know (check all that apply)</p>
+            <input type="checkbox" name="C">C <br>
+            <input type="checkbox" name="C++">C++ <br>
+            <input type="checkbox" name="C#">C# <br>
+            <input type="checkbox" name="Java">Java <br>
+            <input type="checkbox" name="JavaScript">JavaScript <br>
+            <input type="checkbox" name="React">React <br>
+            <input type="checkbox" name="Angular">Angular <br>
+            <input type="checkbox" name="Django">Django <br>
+            <input type="checkbox" name="Spring">Spring <br>
+        <p>Any comments or suggestions</p>
+        <textarea xtarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        <br>
+        <button type="submit" class="submit">Submit</button>
+    </form>
+</body>
+</html>

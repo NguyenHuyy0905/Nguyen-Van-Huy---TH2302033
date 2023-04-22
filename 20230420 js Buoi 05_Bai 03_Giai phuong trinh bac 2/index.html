@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Van Huy - Bai 3: Giai phuong trinh bac 2</title>
+    <style>
+        .numberInput {
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <input oninput="giai_phuong_trinh_bac_2()" type="number" id="numberInput_1" class="numberInput"> *x<sup>2</sup> + 
+        <input oninput="giai_phuong_trinh_bac_2()" type="number" id="numberInput_2" class="numberInput"> *x +
+        <input oninput="giai_phuong_trinh_bac_2()" type="number" id="numberInput_3" class="numberInput"> = 0
+    </p>
+    <p>Nghiem cua phuong trinh:</p>
+    <p>x<sub>1</sub> = <span id="x_1"></span></p>
+    <p>x<sub>2</sub> = <span id="x_2"></span></p>
+</body>
+    <script>
+        function giai_phuong_trinh_bac_2() {
+            let num_1 = parseInt(document.getElementById("numberInput_1").value);
+            let num_2 = parseInt(document.getElementById("numberInput_2").value);
+            let num_3 = parseInt(document.getElementById("numberInput_3").value);
+            let delta = num_2**2 - 4*num_1*num_3;
+            if (delta < 0) {
+                document.getElementById("x_1").innerHTML = "Vô Nghiệm !!"
+                document.getElementById("x_2").innerHTML = "Vô Nghiệm !!"
+            } else if (delta === 0) {
+                document.getElementById("x_1").innerHTML = -num_2/(2*num_1)
+                document.getElementById("x_2").innerHTML = -num_2/(2*num_1)
+            } else {
+                document.getElementById("x_1").innerHTML = (-num_2 + Math.sqrt(delta))/(2*num_1)
+                document.getElementById("x_2").innerHTML = (-num_2 - Math.sqrt(delta))/(2*num_1)
+            }
+        }
+    </script>
+</html>

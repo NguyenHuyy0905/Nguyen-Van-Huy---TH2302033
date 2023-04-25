@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Nguyen Van Huy - Assignment 05 - May tinh</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="main">
+        <div class="display">
+          <div id="math_expression"></div>
+          <div id="result">Kết quả</div>
+        </div>
+        <div class="btn_input">
+          <div class="btn_num_input">
+            <button onclick="add7()" id="num_7">7</button>
+            <button onclick="add8()" id="num_8">8</button>
+            <button onclick="add9()" id="num_9">9</button>
+            <button onclick="add4()" id="num_4">4</button>
+            <button onclick="add5()" id="num_5">5</button>
+            <button onclick="add6()" id="num_6">6</button>
+            <button onclick="add1()" id="num_1">1</button>
+            <button onclick="add2()" id="num_2">2</button>
+            <button onclick="add3()" id="num_3">3</button>
+            <button onclick="calac()" id="cal_ac">AC</button>
+            <button onclick="add0()" id="num_0">0</button>
+            <button onclick="result()" id="cal_result">=</button>
+          </div>
+          <div class="btn_cal_input">
+            <button onclick="addplu()" id="cal_plu">+</button>
+            <button onclick="addmin()" id="cal_min">-</button>
+            <button onclick="addmul()" id="cal_mul">*</button>
+            <button onclick="adddiv()" id="cal_div">/</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let num0 = document.getElementById("num_0").textContent;
+    let num1 = document.getElementById("num_1").textContent;
+    let num2 = document.getElementById("num_2").textContent;
+    let num3 = document.getElementById("num_3").textContent;
+    let num4 = document.getElementById("num_4").textContent;
+    let num5 = document.getElementById("num_5").textContent;
+    let num6 = document.getElementById("num_6").textContent;
+    let num7 = document.getElementById("num_7").textContent;
+    let num8 = document.getElementById("num_8").textContent;
+    let num9 = document.getElementById("num_9").textContent;
+    let calplu = document.getElementById("cal_plu").textContent;
+    let calmin = document.getElementById("cal_min").textContent;
+    let calmul = document.getElementById("cal_mul").textContent;
+    let caldiv = document.getElementById("cal_div").textContent;
+    let calresult = doc.getElementById("display").textContent;
+    function add0() {
+      document.getElementById("math_expression").innerHTML += num0;
+    }
+    function add1() {
+      document.getElementById("math_expression").innerHTML += num1;
+    }
+    function add2() {
+      document.getElementById("math_expression").innerHTML += num2;
+    }
+    function add3() {
+      document.getElementById("math_expression").innerHTML += num3;
+    }
+    function add4() {
+      document.getElementById("math_expression").innerHTML += num4;
+    }
+    function add5() {
+      document.getElementById("math_expression").innerHTML += num5;
+    }
+    function add6() {
+      document.getElementById("math_expression").innerHTML += num6;
+    }
+    function add7() {
+      document.getElementById("math_expression").innerHTML += num7;
+    }
+    function add8() {
+      document.getElementById("math_expression").innerHTML += num8;
+    }
+    function add9() {
+      document.getElementById("math_expression").innerHTML += num9;
+    }
+    function addplu() {
+      document.getElementById("math_expression").innerHTML += calplu;
+    }
+    function addmin() {
+      document.getElementById("math_expression").innerHTML += calmin;
+    }
+    function addmul() {
+      document.getElementById("math_expression").innerHTML += calmul;
+    }
+    function adddiv() {
+      document.getElementById("math_expression").innerHTML += caldiv;
+    }
+    function result() {
+      document.getElementById("result").innerHTML = eval(
+        document.getElementById("math_expression").textContent
+      );
+    }
+    function calac() {
+      document.getElementById("math_expression").innerHTML = "";
+      document.getElementById("result").innerHTML = "";
+    }
+  </script>
+</html>

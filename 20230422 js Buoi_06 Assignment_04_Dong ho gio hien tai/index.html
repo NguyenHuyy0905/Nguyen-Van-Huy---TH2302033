@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buoi 06_Assignment 04_Hien thi dong ho hien tai</title>
+  </head>
+  <body>
+    <h3>
+      Sử dụng Js để làm một cái đồng hồ kỹ thuật số hiển thị màn hình giờ hiện
+      tại:
+    </h3>
+    <p>
+      <span id="hour">00</span> : <span id="minute">00</span> :
+      <span id="second">00</span>
+    </p>
+  </body>
+  <script>
+    let myTimeCount = setInterval(count, 10);
+    function count() {
+      let myTime = new Date();
+      document.getElementById("hour").innerHTML = myTime.getHours();
+      document.getElementById("minute").innerHTML = myTime.getMinutes();
+      document.getElementById("second").innerHTML = myTime.getSeconds();
+    }
+  </script>
+</html>

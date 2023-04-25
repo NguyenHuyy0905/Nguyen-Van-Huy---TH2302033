@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>
+      Vận dụng biến đối tượng Date để tính tuổi của một người. <br />
+      Cho người dùng nhập vào năm sinh của họ, sau đó hiển thị tuổi tương ứng
+    </h2>
+    <button onclick="cal()">Tính tuổi</button>
+    <p>Tuổi của người đó là</p>
+    <p id="age"></p>
+  </body>
+  <script>
+    function cal() {
+      let year = new Date();
+      let year_today = year.getFullYear();
+      do {
+        year_born = prompt("Nhập năm sinh: ");
+      } while (year_born >= year_today);
+      age = year_today - year_born;
+      document.getElementById("age").innerHTML = age;
+    }
+  </script>
+</html>

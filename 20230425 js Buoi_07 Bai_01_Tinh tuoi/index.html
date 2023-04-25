@@ -19,7 +19,9 @@
   <script>
     function cal() {
       let year = new Date();
-      age = year.getFullYear() - document.getElementById("year_born").value;
+      let year_today = year.getFullYear();
+      let year_born = document.getElementById("year_born").value;
+      age = year_today - year_born;
       document.getElementById("age").innerHTML = age;
     }
   </script>

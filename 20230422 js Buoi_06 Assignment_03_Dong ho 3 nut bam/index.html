@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buoi 6: Assignment 3_Dong ho bam gio co 3 nut</title>
+  </head>
+  <body>
+    <h1>Stop watch</h1>
+    <h2>Đồng hồ bấm giờ có 3 nút:</h2>
+    <p><span id="second">00</span> : <span id="miniSecond">00</span></p>
+    <button onclick="startCount()" id="start">Start</button>
+    <button onclick="stopCount()" id="stop">Stop</button>
+    <button onclick="resetCount()" id="reset">Reset</button>
+  </body>
+  <script>
+    function startCount() {
+      let minuteCount = 0;
+      let secondCount = 0;
+      myTimeCount = setInterval(Count, 100);
+      function Count() {
+        secondCount++;
+        if (secondCount === 10) {
+          secondCount = 0;
+          minuteCount++;
+        }
+        document.getElementById("second").innerHTML = minuteCount;
+        document.getElementById("miniSecond").innerHTML = secondCount;
+      }
+    }
+    function stopCount() {
+      clearInterval(myTimeCount);
+    }
+    function resetCount() {
+      document.getElementById("second").innerHTML = 0;
+      document.getElementById("miniSecond").innerHTML = 0;
+      var minuteCount = 0;
+      var secondCount = 0;
+    }
+  </script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai 3: Tinh ngay den giang Sinh nam sau</title>
+  </head>
+  <body>
+    <h2>
+      Viết một chương trình JavaScript để tính toán số ngày còn lại cho đến
+      Giáng sinh năm sau
+    </h2>
+    <p>
+      Ngày hiện tại: <span id="current_date"></span> :
+      <span id="current_month"></span> : <span id="current_year"></span>
+    </p>
+    <p>Số ngày đến giáng sinh năm sau là: <span id="quantity_date"></span></p>
+  </body>
+  <script>
+    var currentDate = new Date();
+
+    document.getElementById("current_year").innerHTML =
+      currentDate.getFullYear();
+    document.getElementById("current_month").innerHTML =
+      "0" + (currentDate.getUTCMonth() + 1);
+    document.getElementById("current_date").innerHTML = currentDate.getDate();
+    const CMAS_DAY = 25;
+    const CMAS_MONTH = 12;
+
+    var cmasDate = new Date(currentDate.getFullYear(), CMAS_MONTH, CMAS_DAY);
+    if (cmasDate.getMonth() === CMAS_MONTH && cmasDate.getDate() > CMAS_DAY) {
+      cmasDate.setFullYear(cmasDate.getFullYear() + 1);
+    }
+    let oneDay = 24 * 60 * 60 * 1000;
+    let dayleft = Math.floor(
+      (cmasDate.getTime() - currentDate.getTime()) / oneDay
+    );
+    document.getElementById("quantity_date").innerHTML = dayleft;
+  </script>
+</html>

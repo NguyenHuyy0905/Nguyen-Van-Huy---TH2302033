@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai 04 - Nam nhuan</title>
+  </head>
+  <body>
+    <h2>
+      Viết một chương trình JavaScript để xác định xem một năm nhất định có phải
+      là năm nhuận trong lịch Tây hay không.
+    </h2>
+    <p>Nhập năm cần xác đinh: <input type="number" name="" id="year" /></p>
+    <button onclick="cal()">Tính :v</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    function cal() {
+      let year = parseInt(document.getElementById("year").value);
+      if (
+        (year % 4 === 0 && year % 100 !== 0) ||
+        (year % 100 === 0 && year % 400 === 0)
+      ) {
+        document.getElementById("result").innerHTML =
+          "Năm " + year + " là năm nhuận !!";
+      } else
+        document.getElementById("result").innerHTML =
+          "Năm " + year + " không là năm nhuận !!";
+    }
+  </script>
+</html>

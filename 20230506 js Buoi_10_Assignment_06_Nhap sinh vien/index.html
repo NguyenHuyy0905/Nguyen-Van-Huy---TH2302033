@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai 01 - Nhap sinh vien</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row py-3">
+        <div class="col-lg-3 col-sm-6">
+          <h3>Mã sinh viên</h3>
+          <input type="text" name="studentId" id="studentId" />
+          <br />
+          <p id="validate-studentId"></p>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h3>Tên sinh viên</h3>
+          <input type="text" name="studentName" id="studentName" />
+          <br />
+          <p id="validate-studentName"></p>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h3>Tuổi sinh viên</h3>
+          <input type="number" name="studentAge" id="studentAge" />
+          <br />
+          <p id="validate-studentAge"></p>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h3>Lớp</h3>
+          <input type="text" name="studentClass" id="studentClass" />
+          <br />
+          <p id="validate-studentClass"></p>
+        </div>
+      </div>
+      <div class="d-grid py-3">
+        <button onclick="addStudent()" id="add" class="btn btn-primary">Add</button>
+      </div>
+      <div class="row">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>Mã SV</th>
+              <th>Tên</th>
+              <th>Tuổi</th>
+              <th>Lớp</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script>
+    var studentId = document.getElementById("studentId");
+    var validate_studentId = document.getElementById("validate-studentId");
+
+    var studentName = document.getElementById("studentName");
+    var validate_studentName = document.getElementById("validate-studentName");
+
+    var studentAge = document.getElementById("studentAge");
+    var validate_studentAge = document.getElementById("validate-studentAge");
+
+    var studentClass = document.getElementById("studentClass");
+    var validate_studentClass = document.getElementById("validate-studentClass");
+
+    var tableBody = document.getElementById("table-body");
+
+    var student_Id;
+    var student_Name;
+    var student_Age;
+    var student_Class;
+
+    var student_Arrays = [];
+
+    function addStudent() {
+      var dem = 0;
+      var student_Obj = {
+        student_Id: studentId.value,
+        student_Name: studentName.value,
+        student_Age: studentAge.value,
+        student_Class: studentClass.value,
+      };
+
+      if (student_Obj.student_Id == "") {
+        validate_studentId.style.color = "Red";
+        validate_studentId.innerHTML = "Hãy điền mã sinh viên !!";
+      } else if (
+        student_Arrays.every(
+          (student_Array) => student_Array.student_Id !== student_Obj.student_Id
+        ) === true
+      ) {
+        validate_studentId.style.color = "Green";
+        validate_studentId.innerHTML = "Mã sinh viên Ok !!";
+        dem++;
+      } else {
+        validate_studentId.style.color = "Red";
+        validate_studentId.innerHTML = "Mã sinh viên đã tồn tại !!";
+      }
+
+      if (student_Obj.student_Name != "") {
+        validate_studentName.style.color = "Green";
+        validate_studentName.innerHTML = "Tên sinh viên Ok !!";
+        dem++;
+      } else {
+        validate_studentName.style.color = "Red";
+        validate_studentName.innerHTML = "Hãy điền tên sinh viên !!";
+      }
+
+      if (student_Obj.student_Age != "") {
+        validate_studentAge.style.color = "Green";
+        validate_studentAge.innerHTML = "Tuổi sinh viên Ok !!";
+        dem++;
+      } else {
+        validate_studentAge.style.color = "Red";
+        validate_studentAge.innerHTML = "Hãy điền tuổi sinh viên !!";
+      }
+
+      if (student_Obj.student_Class != "") {
+        validate_studentClass.style.color = "Green";
+        validate_studentClass.innerHTML = "Lớp Ok !!";
+        dem++;
+      } else {
+        validate_studentClass.style.color = "Red";
+        validate_studentClass.innerHTML = "Hãy điền tên lớp !!";
+      }
+
+      if (dem === 4) {
+        tableBody.innerHTML +=
+          "<tr><td>" +
+          studentId.value +
+          "</td><td>" +
+          studentName.value +
+          "</td><td>" +
+          studentAge.value +
+          "</td><td>" +
+          studentClass.value +
+          "</td></tr>";
+
+        student_Arrays.push(student_Obj);
+      }
+
+      if (typeof Storage !== "undefined") {
+        // Khởi tạo sesionStorage
+        sessionStorage.setItem("studentID", studentId.value);
+        sessionStorage.setItem("studentName", studentName.value);
+        sessionStorage.setItem("studentAge", studentAge.value);
+        sessionStorage.setItem("studentClass", studentClass.value);
+        // get sessionStorage
+        // sessionStorage.getItem("name");
+        // lấy ra số lượng session đã lưu trữ
+        // sessionStorage.length;
+        // xóa 1 item localStorage
+        // sessionStorage.removeItem("name");
+        // xóa tất cả item trong sessionStorage
+        // sessionStorage.clear();
+      } else {
+        alert("Trình duyệt của bạn không hỗ trợ!");
+      }
+    }
+  </script>
+</html>

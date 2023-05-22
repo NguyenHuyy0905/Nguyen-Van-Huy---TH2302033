@@ -1,5 +1,18 @@
 * {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
+}
+.login-huy {
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
 }
 body {
   background-color: #f1f5f8;
@@ -20,6 +33,7 @@ nav {
   margin: 0 auto;
 }
 .links {
+  margin: auto;
   display: inline-flex;
 }
 .links li a {
@@ -32,7 +46,23 @@ nav {
 .links li a:hover {
   color: #49a6e9;
 }
+.login-text {
+  box-shadow: 2px 2px 5px #888;
+  border-radius: 5px;
+  background-color: rgba(222, 222, 222, 0.5);
+  animation: nhap_nhay 3s infinite linear;
+}
+@keyframes nhap_nhay {
+  0% {
+  }
+  50% {
+    background-color: rgba(233, 73, 185, 0.5);
+  }
+  100% {
+  }
+}
 .icon {
+  margin: auto;
   display: inline-flex;
 }
 .icon li i {
@@ -70,6 +100,7 @@ nav {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 8px;
   position: relative;
+  transform: translateX(-15px);
   margin: 5px 0px;
   background-color: rgba(222, 222, 222, 0.5);
   border-radius: 5px;
@@ -107,12 +138,16 @@ nav {
   text-indent: 30px;
 }
 .button-container #prev-btn {
+  border-radius: 5px;
+  padding: 4px;
   display: none;
   right: -100px;
   top: 20px;
   position: absolute;
 }
 .button-container #next-btn {
+  border-radius: 5px;
+  padding: 4px;
   right: -200px;
   top: 20px;
   position: absolute;
@@ -130,4 +165,12 @@ nav {
 .button-container button:hover {
   color: #49a6e9;
   box-shadow: 4px 4px 5px #888;
+}
+#quiz-main__answers li div {
+  display: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(127, 255, 212, 0.3);
 }

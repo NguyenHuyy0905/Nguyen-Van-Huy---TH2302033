@@ -10,8 +10,10 @@ var questions = [
     point: 1,
     script:
       "Vùng đất Ninh Bình ngày nay từng được gọi là Thanh Hoa ngoại trấn từ thời nhà Mạc. Năm 968, sau khi đánh dẹp và thu phục 12 sứ quân, Đinh Bộ Lĩnh lên ngôi hoàng đế, chọn Hoa Lư làm kinh đô, đặt tên nước là Đại Cồ Việt. Từ thời kỳ nhà Đinh cho tới nhà Nguyễn Tây Sơn, vùng đất này đã qua nhiều tên gọi: Trường Yên, Đại Hoàng, Thiên Quan rồi lại đổi thành Trường Yên. Từ thời nhà Mạc đến thời nhà Nguyễn, nơi đây được gọi là Thanh Hoa ngoại trấn. Năm Gia Long thứ 5, nơi đây đổi thành đạo Thanh Bình. Tới năm Minh Mạng thứ 3 (1822), đạo Thanh Bình được đổi thành đạo Ninh Bình, tên gọi Ninh Bình xuất hiện từ đó. Năm Minh Mệnh thứ 12 (1831), vua đổi trấn Ninh Bình thành tỉnh Ninh Bình.",
-    correctColor: "rgba(0, 128, 0, 0.6)",
-    inCorrectColor: "rgba(255, 0, 0, 0.6)",
+    correctColor: "rgba(0, 128, 0, 0.4)",
+    percent_correctColor: "rgba(0, 128, 0, 0.6)",
+    inCorrectColor: "rgba(255, 0, 0, 0.4)",
+    percent_inCorrectColor: "rgba(255, 0, 0, 0.6)",
   },
   {
     index: 2,
@@ -28,8 +30,10 @@ var questions = [
     point: 1,
     script:
       'Trong tên gọi Ninh Bình, từ "Ninh" có nghĩa là an toàn, vững chãi, "Bình" có nghĩa là bình yên. Tên gọi Ninh Bình với hàm ý là vùng đất an toàn, vững chãi, bình yên. Tỉnh Ninh Bình có diện tích tự nhiên gần 1.400 km2. Nơi đây có biển, rừng núi, đồng bằng, giàu tiềm năng phát triển toàn diện và là một địa bàn có vị trí quan trọng về quân sự, tiến có thể đánh, lui có thế giữ.',
-    correctColor: "rgba(0, 128, 0, 0.6)",
-    inCorrectColor: "rgba(255, 0, 0, 0.6)",
+    correctColor: "rgba(0, 128, 0, 0.4)",
+    percent_correctColor: "rgba(0, 128, 0, 0.6)",
+    inCorrectColor: "rgba(255, 0, 0, 0.4)",
+    percent_inCorrectColor: "rgba(255, 0, 0, 0.6)",
   },
   {
     index: 3,
@@ -42,8 +46,10 @@ var questions = [
     point: 1,
     script:
       "Hoa Lư là nơi phát tích của ba vương triều Ðinh, tiền Lê và Lý. Ngày nay, dấu tích của cố đô Hoa Lư thuộc xã Trường Yên, huyện Hoa Lư, tỉnh Ninh Bình, cách Hà Nội gần 100 km về phía nam. Hoa Lư được chọn là kinh đô đầu tiên của nhà nước phong kiến tập quyền khi Đinh Bộ Lĩnh lên ngôi hoàng đế năm 968. Nơi đây có lợi thế quân sự với địa thế đồi núi trùng điệp, bao bọc xung quanh vành đai kinh đô như tấm bình phong vững chãi, cùng dòng sông Hoàng Long uốn khúc và cánh đồng Nho Quan, Gia Viễn với hào sâu. 29 năm triều tiền Lê (980-1009) sau đó và thời kỳ đầu nhà Lý (1009-1010) cũng gắn với mảnh đất Hoa Lư. Đến năm 1010, vua Lý Thái Tổ quyết định dời đô về hoàng thành Thăng Long – Hà Nội .",
-    correctColor: "rgba(0, 128, 0, 0.6)",
-    inCorrectColor: "rgba(255, 0, 0, 0.6)",
+    correctColor: "rgba(0, 128, 0, 0.4)",
+    percent_correctColor: "rgba(0, 128, 0, 0.6)",
+    inCorrectColor: "rgba(255, 0, 0, 0.4)",
+    percent_inCorrectColor: "rgba(255, 0, 0, 0.6)",
   },
   {
     index: 4,
@@ -56,8 +62,10 @@ var questions = [
     point: 1,
     script:
       "Bích Động được biết đến với danh xưng Nam thiên đệ nhị động, tức là động đẹp thứ hai ở trời Nam. Bích Động nằm trong khu du lịch Tam Cốc-Bích Động, có diện tích tự nhiên 350 ha, nằm cách quốc lộ 1A khoảng 2 km, cách thành phố Ninh Bình 7 km. Để tham quan, du khách phải đi bằng thuyền, xuôi theo dòng sông Ngô Đồng thơ mộng. Các ngọn núi ở đây có hình thù đa dạng, nối tiếp nhau.",
-    correctColor: "rgba(0, 128, 0, 0.6)",
-    inCorrectColor: "rgba(255, 0, 0, 0.6)",
+    correctColor: "rgba(0, 128, 0, 0.4)",
+    percent_correctColor: "rgba(0, 128, 0, 0.6)",
+    inCorrectColor: "rgba(255, 0, 0, 0.4)",
+    percent_inCorrectColor: "rgba(255, 0, 0, 0.6)",
   },
   {
     index: 5,
@@ -74,8 +82,10 @@ var questions = [
     point: 1,
     script:
       "Trong chuyến đi tuần cùng với chúa Trịnh Sâm vào năm Giáp Ngọ (1774), tể tướng Nguyễn Nghiễm, cha của đại thi hào Nguyễn Du, thấy động vừa đẹp đẽ vừa nguy nga liền gọi nơi đây là Nam thiên đệ nhị động, đứng sau động Hương Tích và trước động Địch Lộng. Cũng trong chuyến đi tuần này, chúa Trịnh Sâm viếng một ngôi chùa bên ngoài động, nhìn toàn cảnh núi non, sông nước, đồng ruộng, cây cối xanh tươi liền đổi tên nơi đây thành Bích Động, có nghĩa là động xanh. Dòng chữ này được chạm khắc ở vách đá thẳng đứng bên trên mái chùa.",
-    correctColor: "rgba(0, 128, 0, 0.6)",
-    inCorrectColor: "rgba(255, 0, 0, 0.6)",
+    correctColor: "rgba(0, 128, 0, 0.4)",
+    percent_correctColor: "rgba(0, 128, 0, 0.6)",
+    inCorrectColor: "rgba(255, 0, 0, 0.4)",
+    percent_inCorrectColor: "rgba(255, 0, 0, 0.6)",
   },
 ];
 
@@ -95,9 +105,8 @@ var display = "";
 
 var index = 0;
 var chooseAnsValues = [];
-// component
+
 var component = (function () {
-  // loadQuestion
   var loadQuestion = (question, index) => {
     let chooseAnsValue = chooseAnsValues[index];
     let text_1 = "";
@@ -113,13 +122,15 @@ var component = (function () {
     <ul>`;
     question.anwsers.forEach((value, index) => {
       text_2 +=
-        `<li id="li-answer-${index}">
+        `
+        <li id="li-answer-${index}">
       <input type="radio" name="answer" id="${index}"` +
         (chooseAnsValue !== undefined && chooseAnsValue == value
           ? "checked"
           : "") +
         ` value="${value}" />
       <span id="content-answer-${index}">${value}</span>
+      <div id="insert-color"></div>
       <span class="answer-percent" id="answer-percent-${index}" style="display: ${display}">${question.percent[index]}</span>
     </li>`;
     });
@@ -130,14 +141,11 @@ var component = (function () {
     var answer_percent = document.querySelector(
       "#quiz-main__answers li .answer-percent"
     );
-    console.log(answer_percent);
     display_information_content.innerText = question.script;
     quiz_main_question.innerHTML = text_1;
     quiz_main_answers.innerHTML = text_2;
     quiz_main_more_information.innerHTML = text_3;
-    // quiz_main.style.display = "block";
   };
-  // loadPage
   var loadPage = function () {
     // next_Button
     next_Button.addEventListener("click", function () {
@@ -181,37 +189,46 @@ var component = (function () {
     });
   };
 
+  // more information
   var more_information = function () {
     let currentQuestion = questions[index];
     var check_test = document.querySelectorAll("input");
     var check_percent = document.querySelectorAll(
       "#quiz-main__answers li .answer-percent"
     );
-    var check_colors = document.querySelectorAll(
-      "#quiz-main__answers li input"
+    var check_colors = document.querySelectorAll("#quiz-main__answers li");
+    var check_percent_colors = document.querySelectorAll(
+      "#quiz-main__answers li div"
     );
-    console.log(check_colors[0]);
-    console.log(typeof check_percent);
+
     check_test.forEach((value, index) => {
-      // console.log(check_test[index]);
       check_test[index].addEventListener("click", () => {
         quiz_main_more_information.style.display = "block";
         information.style.display = "block";
+
         check_percent.forEach((value, index) => {
           check_percent[index].style.display = "inline-block";
         });
+
         check_colors.forEach((check_color, index) => {
-          check_color.parentElement.style.background =
-            currentQuestion.inCorrectColor;
-          check_colors[
+          check_color.style.background = currentQuestion.inCorrectColor;
+          check_colors[currentQuestion.indexCorrectAnswer].style.background =
+            currentQuestion.correctColor;
+        });
+
+        check_percent_colors.forEach((check_percent_color, index) => {
+          check_percent_color.style.background =
+            currentQuestion.percent_inCorrectColor;
+          check_percent_colors[
             currentQuestion.indexCorrectAnswer
-          ].parentElement.style.background = currentQuestion.correctColor;
+          ].style.background = currentQuestion.percent_correctColor;
+          check_percent_color.style.display = "block";
+          check_percent_colors[index].style.width =
+            currentQuestion.percent[index];
         });
       });
     });
   };
-
-  // more_information();
 
   // return
   return {
